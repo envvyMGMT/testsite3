@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Claire Bennett — Real Estate, Omaha</title>
+<meta name="description" content="Claire Bennett is a real estate agent in Omaha, Nebraska. Working with first-time buyers, growing families, and people moving home." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..700&family=DM+Sans:opsz,wght@9..40,300..600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #1d1f1c;
+  --char: #2c2e2a;
+  --bark: #5a5d57;
+  --mist: #9b9e96;
+  --line: #d8dad2;
+  --linen: #e8eae0;
+  --cream: #f1f3e8;
+  --paper: #f7f9ee;
+  --sage: #7d8c64;
+  --sage-soft: #a3b186;
+  --sage-deep: #5e6b48;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', -apple-system, sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  line-height: 1.55;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+
+.display {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  line-height: 1.0;
+}
+
+/* ============== NAV ============== */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  padding: 1.25rem 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(247, 249, 238, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.nav-brand {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 500;
+  font-size: 1.1rem;
+  letter-spacing: -0.015em;
+}
+
+.nav-brand .dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--sage);
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2.25rem;
+  font-size: 0.9rem;
+  color: var(--bark);
+}
+
+.nav-links a:hover { color: var(--ink); }
+
+.nav-cta {
+  background: var(--ink);
+  color: var(--paper);
+  font-size: 0.85rem;
+  padding: 0.6rem 1.25rem;
+  border-radius: 999px;
+  transition: background 0.2s;
+}
+
+.nav-cta:hover { background: var(--sage-deep); }
+
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  nav { padding: 1rem 1.5rem; }
+}
+
+/* ============== HERO ============== */
+.hero {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 6.5rem 2.5rem 3.5rem;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 3.5rem;
+  align-items: stretch;
+  min-height: 480px;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.25rem 0;
+}
+
+.hero-text-top {
+  display: contents;
+}
+
+.hero-eyebrow {
+  font-size: 0.9rem;
+  color: var(--sage-deep);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.hero-eyebrow::before {
+  content: "";
+  width: 28px;
+  height: 1.5px;
+  background: var(--sage);
+}
+
+.hero h1 {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: clamp(2rem, 4.25vw, 3.25rem);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+  margin-bottom: 1.25rem;
+}
+
+.hero h1 .accent {
+  color: var(--sage);
+  font-weight: 500;
+}
+
+.hero-sub {
+  font-size: 1.05rem;
+  line-height: 1.55;
+  color: var(--bark);
+  max-width: 460px;
+  margin-bottom: 1.75rem;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: auto;
+}
+
+.hero-btn-primary {
+  background: var(--ink);
+  color: var(--paper);
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.hero-btn-primary:hover { background: var(--sage-deep); }
+
+.hero-btn-secondary {
+  font-size: 0.9rem;
+  color: var(--char);
+  border-bottom: 1.5px solid var(--ink);
+  padding-bottom: 2px;
+  transition: color 0.2s;
+}
+
+.hero-btn-secondary:hover { color: var(--sage-deep); border-bottom-color: var(--sage-deep); }
+
+.hero-footnote {
+  display: flex;
+  gap: 0.6rem;
+  font-size: 0.825rem;
+  color: var(--bark);
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--line);
+  margin-top: 1.75rem;
+}
+
+.hero-image {
+  background-image: url('https://images.pexels.com/photos/12899080/pexels-photo-12899080.jpeg?auto=compress&cs=tinysrgb&w=1400');
+  background-size: cover;
+  background-position: center 20%;
+  border-radius: 4px;
+  min-height: 100%;
+}
+
+@media (max-width: 900px) {
+  .hero { padding: 6rem 1.5rem 3rem; }
+  .hero-grid { grid-template-columns: 1fr; gap: 2.5rem; min-height: 0; }
+  .hero-text { padding: 0; }
+  .hero-image { aspect-ratio: 3 / 4; max-width: 480px; min-height: 0; }
+  .hero-footnote { margin-top: 2rem; padding-top: 1.5rem; }
+}
+
+/* ============== STATS BAR ============== */
+.stats-bar {
+  background: var(--ink);
+  color: var(--paper);
+  padding: 2.75rem 2.5rem;
+}
+
+.stats-inner {
+  max-width: 1320px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.stat-num {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: clamp(2.25rem, 4vw, 3.25rem);
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  line-height: 0.95;
+  color: var(--sage-soft);
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  color: rgba(247, 249, 238, 0.6);
+}
+
+@media (max-width: 768px) {
+  .stats-bar { padding: 2.5rem 1.5rem; }
+  .stats-inner { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+}
+
+/* ============== ABOUT ============== */
+.about {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 5rem 2.5rem;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.section-eyebrow {
+  font-size: 0.9rem;
+  color: var(--sage-deep);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.section-eyebrow::before {
+  content: "";
+  width: 28px;
+  height: 1.5px;
+  background: var(--sage);
+}
+
+.about h2 {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: clamp(1.875rem, 3.5vw, 2.75rem);
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+}
+
+.about-body p {
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: var(--char);
+  margin-bottom: 1.25rem;
+}
+
+.about-body p:last-child { margin-bottom: 0; }
+
+@media (max-width: 900px) {
+  .about { padding: 5rem 1.5rem; }
+  .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+}
+
+/* ============== LISTINGS ============== */
+.listings {
+  background: var(--cream);
+  padding: 5rem 2.5rem;
+}
+
+.listings-inner { max-width: 1320px; margin: 0 auto; }
+
+.listings-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin-bottom: 3rem;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.listings-header h2 {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: clamp(1.875rem, 3.5vw, 2.75rem);
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+}
+
+.listings-header p {
+  font-size: 0.95rem;
+  color: var(--bark);
+  max-width: 320px;
+}
+
+.listings-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.listing {
+  display: block;
+  cursor: pointer;
+}
+
+.listing-image {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+  overflow: hidden;
+  transition: transform 0.4s;
+}
+
+.listing:hover .listing-image { transform: translateY(-4px); }
+
+.listing-status {
+  font-size: 0.8rem;
+  color: var(--sage-deep);
+  letter-spacing: 0.04em;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.listing-status::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background: var(--sage);
+  border-radius: 50%;
+}
+
+.listing-status.sold::before { background: var(--bark); }
+.listing-status.sold { color: var(--bark); }
+
+.listing h3 {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  letter-spacing: -0.015em;
+  margin-bottom: 0.35rem;
+  line-height: 1.2;
+}
+
+.listing-meta {
+  font-size: 0.9rem;
+  color: var(--bark);
+  display: flex;
+  gap: 1rem;
+}
+
+.listing-meta span:not(:last-child)::after {
+  content: "·";
+  margin-left: 1rem;
+  color: var(--mist);
+}
+
+.listing-price {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 0.5rem;
+  letter-spacing: -0.005em;
+}
+
+@media (max-width: 900px) {
+  .listings { padding: 5rem 1.5rem; }
+  .listings-grid { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+}
+
+@media (max-width: 600px) {
+  .listings-grid { grid-template-columns: 1fr; }
+}
+
+/* ============== APPROACH ============== */
+.approach {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 5rem 2.5rem;
+}
+
+.approach h2 {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: clamp(1.875rem, 3.5vw, 2.75rem);
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  margin-bottom: 3rem;
+  max-width: 700px;
+}
+
+.approach-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+}
+
+.approach-item {
+  border-top: 1.5px solid var(--sage);
+  padding-top: 1.5rem;
+}
+
+.approach-num {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 0.9rem;
+  color: var(--sage-deep);
+  margin-bottom: 1rem;
+  letter-spacing: 0.04em;
+}
+
+.approach-item h3 {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin-bottom: 0.75rem;
+}
+
+.approach-item p {
+  font-size: 0.95rem;
+  color: var(--bark);
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .approach { padding: 5rem 1.5rem; }
+  .approach-grid { grid-template-columns: 1fr; gap: 2rem; }
+}
+
+/* ============== TESTIMONIAL ============== */
+.testimonial {
+  background: var(--sage-deep);
+  color: var(--paper);
+  padding: 5rem 2.5rem;
+}
+
+.testimonial-inner {
+  max-width: 880px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.testimonial blockquote {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: clamp(1.5rem, 2.75vw, 2.25rem);
+  font-weight: 400;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+  margin-bottom: 2rem;
+}
+
+.testimonial blockquote::before {
+  content: "“";
+  color: var(--sage-soft);
+  margin-right: 0.1em;
+}
+
+.testimonial blockquote::after {
+  content: "”";
+  color: var(--sage-soft);
+}
+
+.testimonial-author {
+  font-size: 0.9rem;
+  color: rgba(247, 249, 238, 0.7);
+  letter-spacing: 0.04em;
+}
+
+@media (max-width: 768px) {
+  .testimonial { padding: 5rem 1.5rem; }
+}
+
+/* ============== CONTACT ============== */
+.contact {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 5rem 2.5rem;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.contact-text h2 {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  font-weight: 400;
+  letter-spacing: -0.035em;
+  line-height: 1.0;
+  margin-bottom: 2rem;
+}
+
+.contact-text h2 .accent {
+  color: var(--sage);
+  font-weight: 500;
+}
+
+.contact-text p {
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: var(--char);
+  margin-bottom: 2rem;
+  max-width: 420px;
+}
+
+.contact-info {
+  font-size: 0.95rem;
+  line-height: 1.95;
+  color: var(--char);
+  border-top: 1px solid var(--line);
+  padding-top: 1.5rem;
+  max-width: 360px;
+}
+
+.contact-info-label {
+  font-size: 0.8rem;
+  color: var(--bark);
+  letter-spacing: 0.04em;
+  display: block;
+  margin-bottom: 0.15rem;
+  margin-top: 0.5rem;
+}
+
+.contact-info-label:first-child { margin-top: 0; }
+
+/* form */
+form {
+  background: var(--linen);
+  padding: 2.75rem;
+  border-radius: 4px;
+}
+
+form h3 {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-bottom: 1.75rem;
+  letter-spacing: -0.015em;
+}
+
+.form-group { margin-bottom: 1rem; }
+
+.form-group label {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--bark);
+  margin-bottom: 0.4rem;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.95rem;
+  color: var(--ink);
+  border-radius: 3px;
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--sage);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 90px;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.form-submit {
+  width: 100%;
+  padding: 1rem;
+  background: var(--ink);
+  color: var(--paper);
+  border: none;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.95rem;
+  cursor: pointer;
+  font-weight: 500;
+  border-radius: 3px;
+  transition: background 0.2s;
+  margin-top: 0.75rem;
+}
+
+.form-submit:hover { background: var(--sage-deep); }
+
+@media (max-width: 900px) {
+  .contact { padding: 5rem 1.5rem; }
+  .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+  form { padding: 1.75rem 1.5rem; }
+}
+
+/* ============== FOOTER ============== */
+footer {
+  background: var(--ink);
+  color: rgba(247, 249, 238, 0.6);
+  padding: 3rem 2.5rem 2rem;
+}
+
+.footer-inner {
+  max-width: 1320px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer-brand {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 500;
+  color: var(--paper);
+  letter-spacing: -0.015em;
+}
+
+.footer-brand .dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--sage);
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+
+.spec-note {
+  background: rgba(247, 249, 238, 0.04);
+  padding: 1rem 1.25rem;
+  margin-top: 1.5rem;
+  font-size: 0.78rem;
+  color: rgba(247, 249, 238, 0.5);
+  line-height: 1.6;
+  max-width: 1320px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 3px;
+}
+
+.spec-note strong { color: rgba(247, 249, 238, 0.7); font-weight: 500; }
+
+@media (max-width: 768px) {
+  .footer-inner { flex-direction: column; align-items: flex-start; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-brand"><span class="dot"></span>Claire Bennett</div>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#listings">Listings</a>
+    <a href="#approach">Approach</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <a href="#contact" class="nav-cta">Get in touch</a>
+</nav>
+
+<header class="hero">
+  <div class="hero-grid">
+    <div class="hero-text">
+      <div class="hero-eyebrow">Claire Bennett · Realtor®</div>
+      <h1>Buying or selling <span class="accent">in Omaha?</span> Let's talk.</h1>
+      <p class="hero-sub">I help first-time buyers, growing families, and people moving home find the right place — and pay the right price for it.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="hero-btn-primary">Schedule a call</a>
+        <a href="#listings" class="hero-btn-secondary">See recent work →</a>
+      </div>
+      <div class="hero-footnote">
+        <span>Bennett Realty</span>
+        <span>·</span>
+        <span>Serving Omaha &amp; surrounding</span>
+      </div>
+    </div>
+    <div class="hero-image"></div>
+  </div>
+</header>
+
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div>
+      <div class="stat-num">8 yrs</div>
+      <div class="stat-label">In real estate</div>
+    </div>
+    <div>
+      <div class="stat-num">214</div>
+      <div class="stat-label">Families helped</div>
+    </div>
+    <div>
+      <div class="stat-num">$94M</div>
+      <div class="stat-label">Lifetime volume</div>
+    </div>
+    <div>
+      <div class="stat-num">4.9★</div>
+      <div class="stat-label">Average review</div>
+    </div>
+  </div>
+</div>
+
+<section id="about" class="about">
+  <div class="about-grid">
+    <div>
+      <div class="section-eyebrow">About</div>
+      <h2>Twenty years in Omaha. Eight in real estate.</h2>
+    </div>
+    <div class="about-body">
+      <p>I grew up in Bellevue, went to UNO, and have lived within thirty minutes of Memorial Park my whole adult life. I know which neighborhoods get the morning sun, which schools have waitlists, and which side of Dodge to avoid during rush hour.</p>
+      <p>What I love about this work is the moment someone walks into the right house and just <em>knows</em>. That's the part I'm here for. The negotiation, paperwork, inspections, lender hand-offs — those are my job. Your job is to find the place you want to live for the next ten years.</p>
+    </div>
+  </div>
+</section>
+
+<div class="listings" id="listings">
+  <div class="listings-inner">
+    <div class="listings-header">
+      <h2>Recent listings.</h2>
+      <p>A small selection from the last six months. Full portfolio available on request.</p>
+    </div>
+    <div class="listings-grid">
+      <a href="#" class="listing">
+        <div class="listing-image" style="background-image:url('https://images.pexels.com/photos/2079246/pexels-photo-2079246.jpeg?auto=compress&cs=tinysrgb&w=1200');"></div>
+        <div class="listing-status">For sale</div>
+        <h3>312 South 51st Street</h3>
+        <div class="listing-meta">
+          <span>Dundee</span>
+          <span>4 bd · 2.5 ba</span>
+        </div>
+        <div class="listing-price">$478,500</div>
+      </a>
+      <a href="#" class="listing">
+        <div class="listing-image" style="background-image:url('https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&w=1200');"></div>
+        <div class="listing-status sold">Sold</div>
+        <h3>14820 Lonergan Ridge</h3>
+        <div class="listing-meta">
+          <span>West Omaha</span>
+          <span>5 bd · 6 ba</span>
+        </div>
+        <div class="listing-price">$2,485,000</div>
+      </a>
+      <a href="#" class="listing">
+        <div class="listing-image" style="background-image:url('https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=1200');"></div>
+        <div class="listing-status sold">Sold</div>
+        <h3>1247 North 60th Avenue</h3>
+        <div class="listing-meta">
+          <span>Benson</span>
+          <span>3 bd · 2 ba</span>
+        </div>
+        <div class="listing-price">$315,000</div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<section class="approach" id="approach">
+  <div class="section-eyebrow">How I work</div>
+  <h2>Patient, prepared, honest about what I see.</h2>
+  <div class="approach-grid">
+    <div class="approach-item">
+      <div class="approach-num">01</div>
+      <h3>I take the time it takes.</h3>
+      <p>I won't rush you into a house that doesn't fit. The right home is worth waiting for. I've had clients take two weeks and clients take eight months — both are fine.</p>
+    </div>
+    <div class="approach-item">
+      <div class="approach-num">02</div>
+      <h3>I'll tell you what I see.</h3>
+      <p>If a house has a foundation issue, a tough resale, or a school district that doesn't match what you said you wanted — I'll say so. Even if it costs me the deal.</p>
+    </div>
+    <div class="approach-item">
+      <div class="approach-num">03</div>
+      <h3>I keep working after closing.</h3>
+      <p>Need a plumber, a painter, or a recommendation for a contractor? I have a list. I want my clients to be neighbors for years, not transactions for a month.</p>
+    </div>
+  </div>
+</section>
+
+<div class="testimonial">
+  <div class="testimonial-inner">
+    <blockquote>Claire is the rare agent who actually listens. We told her the list of things we cared about and she only showed us houses that had at least four of the five. Saved us so much time.</blockquote>
+    <div class="testimonial-author">— Marc &amp; Lila, bought in Dundee, 2024</div>
+  </div>
+</div>
+
+<section class="contact" id="contact">
+  <div class="contact-grid">
+    <div class="contact-text">
+      <div class="section-eyebrow">Let's talk</div>
+      <h2>Coffee or <span class="accent">a call</span> — your choice.</h2>
+      <p>Whether you're six months out or six years out, I'm happy to chat. No pressure, no commitment, no follow-up sequence. Just a real conversation about whether buying or selling makes sense for you.</p>
+      <div class="contact-info">
+        <span class="contact-info-label">Phone</span>
+        (402) 555 - 0184
+        <span class="contact-info-label">Email</span>
+        claire@bennett.example
+        <span class="contact-info-label">Office</span>
+        Bennett Realty · 4920 Underwood Ave
+        <span class="contact-info-label">License</span>
+        NE 20180294
+      </div>
+    </div>
+    <form onsubmit="event.preventDefault(); alert('This is a demo form. In a real listing, this would email Claire.');">
+      <h3>Send a message</h3>
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required />
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone (optional)</label>
+        <input type="tel" id="phone" name="phone" />
+      </div>
+      <div class="form-group">
+        <label for="goal">What are you thinking about?</label>
+        <select id="goal" name="goal">
+          <option>Buying soon</option>
+          <option>Selling soon</option>
+          <option>Both</option>
+          <option>Just gathering info</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="message">Anything I should know?</label>
+        <textarea id="message" name="message"></textarea>
+      </div>
+      <button type="submit" class="form-submit">Send</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand"><span class="dot"></span>Claire Bennett · Real Estate</div>
+    <div>© 2026 · Site by GroundRise Studio</div>
+  </div>
+  <div class="spec-note">
+    <strong>Concept design / portfolio piece.</strong> Fictional personal brand site built for portfolio purposes by GroundRise Studio. The agent, listings, photos, and testimonials are illustrative. Imagery from Pexels.
+  </div>
+</footer>
+
+</body>
+</html>
